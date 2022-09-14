@@ -8,12 +8,13 @@ passedQuestion = []
 print("Vítejte v obdobě Turingova testu")
 print("Z 21 ti otázek jste si vybral/a 7 a ty mi můžete pokládat v jakémkoliv pořadí")
 
-firstAnswer = ["S čím vám mohu pomoci? ", "Tak se ptejte ", "Tak poslouchám "]
+firstAnswer = ["S čím vám mohu pomoci?", "Tak se ptejte", "Tak poslouchám"]
 answers = ["Máte další otázku?", "Co by vás dále zajímalo?", "Můžete se ptát dál", "A dál?", "Ještě něco?"]
 lastAnswer = "Máte poslední otázku"
 
 fa = random.choice(firstAnswer)
 
+answer = int(input(fa))
 # kdyz se predtim zepta jestli jsem muz nebo zena, tak napisu, kdyj jsem zena, jsem preci take clovek
 # osetrit ze se zepta dvakrat na stejnou otazku
 
@@ -128,46 +129,38 @@ def human_1():
         print(myAnswers[bestAnswer])
         
 # body
-def options():
-    answer = int(input(fa))
+if answer == 1:
+    time.sleep(1)
+    human_1()
+elif answer == 4:
+    time.sleep(1)
+    lunch_4()
+elif answer == 6:
+    time.sleep(1)
+    matika_6()
+elif answer == 21:
+    time.sleep(1)
+    weather_21()
+elif answer == 22:
+    time.sleep(1)
+    vstavani_22()
+elif answer == 20:
+    time.sleep(1)
+    Kenobi_20()
+elif answer == 11:
+    time.sleep(1)
+    dreams_11()    
+elif answer == 17:
+    time.sleep(1)
+    Siblings_17()
+elif answer == 12:
+    time.sleep(1)
+    food_12()    
 
-    if answer == 1:
-        time.sleep(1)
-        human_1()
-    elif answer == 4:
-        time.sleep(1)
-        lunch_4()
-    elif answer == 6:
-        time.sleep(1)
-        matika_6()
-    elif answer == 7:
-        time.sleep(1)
-        movies_7()    
-    elif answer == 21:
-        time.sleep(1)
-        weather_21()
-    elif answer == 22:
-        time.sleep(1)
-        vstavani_22()
-    elif answer == 20:
-        time.sleep(1)
-        Kenobi_20()
-    elif answer == 11:
-        time.sleep(1)
-        dreams_11()    
-    elif answer == 17:
-        time.sleep(1)
-        Siblings_17()
-    elif answer == 12:
-        time.sleep(1)
-        food_12()    
-    else:
-        print("Tak na tuto otázku neznám odpověď")
-        time.sleep(1)
-        options()
 
-options()
 
-#musime doresit jak se bude pokladat dalsi otazka na konci fce, asi bude lepsi at si tam kazdej tu otazku dopise sam
+
+
+
 # print(answer)
 # print(type(answer))
